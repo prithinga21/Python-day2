@@ -1,0 +1,174 @@
+1.check whether the triangle is valid or not.
+  a=float(input("Enter side1: "))
+b=float(input("Enter side2: "))
+c=float(input("Enter side3: "))
+if((a+b>c) and (a+c>b)and (b+c>a)):
+    print("\nValid!!!!")
+else:
+    print("\nNOT valid :(")
+ 
+  2.driver eligible
+marital_status = input("Enter the marital status (married/unmarried): ")
+gender = input("Enter the gender (male/female): ")
+age = int(input("Enter the age: "))
+if (marital_status == 'married' or (marital_status == 'unmarried' and (gender == 'male' and age > 30) or (gender == 'female' and age > 25))):
+  print("eligible")
+else:
+  print("not eligible")
+
+    3.Largest of three numbers:
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+num3 = float(input("Enter the third number: "))
+
+if (num1 >= num2 and num1 >= num3):
+    largest = num1
+elif (num2 >= num1 and num2 >= num3):
+    largest = num2
+else:
+    largest = num3
+
+print("The largest number is: ", largest)
+
+  4.extract the last two digits of a given integer n:
+n = int(input("Enter a number with more than 2 digits: "))
+
+if n < 100:
+    print("The number should have more than 2 digits.")
+else:
+    last_two_digits = n % 100
+    print("The last two digits are: ", last_two_digits)
+
+  5.Determine whether a rectangle
+print("Enter rectangle four sides of length: ")
+a = float(input("a = "))
+b = float(input("b = "))
+c = float(input("c = "))
+d = float(input("d = "))
+
+if (a * b == c * d) or (a * c == b * d) or (a * d == b * c):
+    print("Yes")
+else:
+    print("No")
+
+  6.check whether the given three sides of a triangle are valid or not.
+  print("Enter rectangle four sides of length: ")
+a = float(input("a = "))
+b = float(input("b = "))
+c = float(input("c = "))
+d = float(input("d = "))
+
+if (a * b == c * d) or (a * c == b * d) or (a * d == b * c):
+    print("Yes")
+else:
+    print("No")
+
+  7.Given time in hours
+time_in_hours = float(input("Enter time in hours: "))
+
+if time_in_hours < 0 or time_in_hours > 12:
+    print("Invalid input")
+else:
+    minutes_to_coincide = abs(60 * (time_in_hours % 12) - 11 * 6)
+    print("The time in minutes at which the minute and hour hands coincide in the next one hour is: ", minutes_to_coincide)
+
+  8.CALCULATE GRADE
+sub1=int(input("Mark in subject1: "))
+sub2=int(input('Mark in subject2: '))
+sub3=int(input("Mark in subject3: "))
+sub4=int(input("Mark in subject4: "))
+sub5=int(input("Mark in subject5: "))
+sum=sub1+sub2+sub3+sub4+sub5
+if((sub1>=35 or sub2>=35) and sub3>=35 and sub4>=35 and sub5>=35 and sum>=250):
+    print("\nQUALIFIED!!!")
+else:
+    print("\nBETTER LUCK NEXT TIME :)")
+
+  9.menu driven calculator
+print("1 – addition")
+print("2 – subtraction")
+print("3 – multiplication")
+print("4 – division")
+print("5 – modulus")
+print("6 – average")
+print("7 – power")
+
+choice = int(input("Enter your choice: "))
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+
+if choice == 1:
+    result = num1 + num2
+    print("Result:", result)
+elif choice == 2:
+    result = num1 - num2
+    print("Result:", result)
+elif choice == 3:
+    result = num1 * num2
+    print("Result:", result)
+elif choice == 4:
+    if num2 != 0:
+        result = num1 / num2
+        print("Result:", result)
+    else:
+        print("Error: Division by zero is not allowed.")
+elif choice == 5:
+    if num2 != 0:
+        result = num1 % num2
+        print("Result:", result)
+    else:
+        print("Error: Modulus by zero is not allowed.")
+elif choice == 6:
+    result = (num1 + num2) / 2
+    print("Result:", result)
+elif choice == 7:
+    result = num1 ** num2
+    print("Result:", result)
+else:
+    print("Error: Invalid choice.")
+
+  10.check whether the given number is a perfect square or not.
+num = int(input("Enter any integer: "))
+
+i = 1
+while i * i <= num:
+    if i * i == num:
+        print("Yes")
+        break
+    i += 1
+else:
+    print("No")
+
+  11.library charges
+days_late = int(input("Enter how many days late you are: "))
+
+if days_late <= 0:
+    print("No fine")
+elif days_late <= 5:
+    fine = days_late * 0.5
+    print(f"Your fine: Rs.{fine:.2f}")
+elif days_late <= 10:
+    fine = (days_late - 5) * 1 + 2.5
+    print(f"Your fine: Rs.{fine:.2f}")
+elif days_late <= 30:
+    fine = (days_late - 10) * 5 + 7.5
+    print(f"Your fine: Rs.{fine:.2f}")
+else:
+    print("Your membership has been cancelled")
+
+  12.ELECTRICITY BILL
+  unit=float(input("Enter a number: "))
+if(unit<200):
+    bill=unit*1.2
+elif(unit<=200 and unit<400):
+    bill=unit*1.5
+elif(unit<=400 and unit<600):
+    bill=unit*1.8
+else:
+    bill=unit*2.0
+if(bill>=400):
+    bill+=bill*0.15
+if(bill>=100):
+    bill=100
+print("The Electricity bill amount is: ",bill)
+
